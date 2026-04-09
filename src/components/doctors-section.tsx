@@ -43,7 +43,7 @@ export function DoctorsSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-12 md:mb-16 max-w-3xl"
         >
-          <span className="inline-block text-[10px] tracking-widest font-medium text-primary uppercase mb-4">
+          <span className="inline-block text-[10px] tracking-widest font-medium text-amber-500 uppercase mb-4">
             Our Doctors
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4 tracking-tight leading-tight">
@@ -65,9 +65,9 @@ export function DoctorsSection() {
                 ease: "easeOut"
               }}
               className={cn(
-                "group rounded-2xl overflow-hidden",
+                "group rounded-3xl overflow-hidden",
                 "bg-card border border-border/50",
-                "hover:-translate-y-1 hover:border-primary/20 hover:shadow-xl hover:shadow-primary/5",
+                "hover:-translate-y-1 hover:border-amber-400/50 glow-gold-hover",
                 "transition-all duration-400 flex",
                 // Featured layout strategy
                 doctor.featured 
@@ -100,7 +100,7 @@ export function DoctorsSection() {
                 )}>
                   {doctor.name}
                 </h3>
-                <p className="text-sm font-semibold text-primary/80 uppercase tracking-wider mb-4">
+                <p className="text-sm font-semibold text-teal-500/80 uppercase tracking-wider mb-4">
                   {doctor.specialty}
                 </p>
                 <p className="text-slate-600 dark:text-white/70 leading-relaxed text-sm md:text-base">

@@ -17,12 +17,19 @@
   --color-border: var(--border-color);
   --color-ring: var(--ring);
   --color-surface-alt: var(--surface-alt);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
   --font-sans: var(--font-inter);
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-3xl: 24px;
 }
+
+@custom-variant dark (&:is(.dark *));
 
 /* ---------- Luxurious Light Mode ---------- */
 :root {
@@ -38,6 +45,9 @@
   --border-color: rgba(0, 0, 0, 0.08);
   --ring: rgba(15, 118, 110, 0.3);
   --surface-alt: #F4F4F5;
+  --gold-400: #FBBF24;
+  --gold-500: #F59E0B;
+  --gold-600: #D97706;
 }
 
 /* ---------- Luxurious Dark Mode ---------- */
@@ -54,6 +64,9 @@
   --border-color: rgba(255, 255, 255, 0.08);
   --ring: #2DD4BF;
   --surface-alt: #060606;
+  --gold-400: #FCD34D;
+  --gold-500: #FBBF24;
+  --gold-600: #F59E0B;
 }
 
 /* ---------- Base Styles ---------- */
@@ -133,4 +146,19 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Golden Glow Utilities */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.glow-gold-hover {
+  transition: all 0.3s ease;
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
+  border-color: rgba(245, 158, 11, 0.6);
 }

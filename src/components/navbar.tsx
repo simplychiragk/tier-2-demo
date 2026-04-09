@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import {
@@ -20,7 +19,6 @@ const navLinks = [
 ];
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -56,7 +54,7 @@ export function Navbar() {
             height="28"
             viewBox="0 0 28 28"
             fill="none"
-            className="text-primary transition-transform duration-300 group-hover:scale-110"
+            className="text-primary transition-all duration-300 group-hover:scale-110 group-hover:text-amber-500 group-hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]"
             aria-hidden="true"
           >
             <rect
@@ -99,8 +97,8 @@ export function Navbar() {
               <a
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors duration-200 hover:text-primary",
-                  scrolled ? "text-muted" : "text-white/70 hover:text-white"
+                  "text-sm font-medium transition-all duration-300 hover:text-amber-500 hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]",
+                  scrolled ? "text-muted" : "text-white/70 hover:text-amber-400"
                 )}
               >
                 {link.label}
@@ -111,21 +109,6 @@ export function Navbar() {
 
         {/* Actions */}
         <div className="flex items-center gap-3 shrink-0">
-          {mounted && (
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className={cn(
-                "flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200",
-                scrolled
-                  ? "text-muted hover:bg-surface-alt hover:text-primary"
-                  : "text-white/60 hover:text-white hover:bg-white/10"
-              )}
-              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-            >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-          )}
-
           {/* Mobile hamburger */}
           <button
             className={cn(
@@ -152,7 +135,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-3 px-4 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                  className="block py-3 px-4 text-sm font-medium text-foreground/80 hover:text-amber-500 hover:bg-amber-500/5 rounded-2xl transition-all duration-300"
                 >
                   {link.label}
                 </a>

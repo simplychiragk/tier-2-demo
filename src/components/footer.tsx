@@ -67,7 +67,7 @@ export function Footer() {
                   <li key={link}>
                     <a
                       href={`#${link.toLowerCase().replace(/\s+/g, "").replace("our", "")}`}
-                      className="text-sm text-muted hover:text-primary transition-colors duration-200"
+                      className="text-sm text-muted hover:text-amber-500 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]"
                     >
                       {link}
                     </a>
@@ -82,15 +82,15 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Contact</h4>
             <ul className="flex flex-col gap-3" role="list">
               <li className="flex items-center gap-2.5 text-sm text-slate-600 dark:text-white/70">
-                <MapPin size={14} className="text-primary shrink-0" />
+                <MapPin size={14} className="text-amber-500 shrink-0" />
                 42 Health Avenue, New Delhi
               </li>
               <li className="flex items-center gap-2.5 text-sm text-slate-600 dark:text-white/70">
-                <Phone size={14} className="text-primary shrink-0" />
+                <Phone size={14} className="text-amber-500 shrink-0" />
                 +91 98765 43210
               </li>
               <li className="flex items-center gap-2.5 text-sm text-slate-600 dark:text-white/70">
-                <Mail size={14} className="text-primary shrink-0" />
+                <Mail size={14} className="text-amber-500 shrink-0" />
                 care@medcareclinic.in
               </li>
             </ul>
@@ -111,7 +111,7 @@ export function Footer() {
                 key={label}
                 href="#"
                 aria-label={label}
-                className="w-9 h-9 rounded-full flex items-center justify-center text-muted hover:text-primary hover:bg-primary/5 transition-all duration-200"
+                className="w-9 h-9 rounded-full flex items-center justify-center text-muted hover:text-amber-500 hover:bg-amber-500/10 transition-all duration-300 hover:shadow-[0_0_15px_rgba(245,158,11,0.3)]"
               >
                 <Icon size={18} />
               </a>

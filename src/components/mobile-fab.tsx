@@ -1,27 +1,9 @@
 "use client";
 
 import { MenuItem, MenuContainer } from "@/components/ui/fluid-menu";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import {
-  Menu as MenuIcon,
-  X,
-  Home,
-  Stethoscope,
-  Users,
-  MessageSquare,
-  Sun,
-  Moon,
-} from "lucide-react";
+import { Menu as MenuIcon, X, Home, Stethoscope, Users, MessageSquare } from "lucide-react";
 
 export function MobileFab() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -60,18 +42,7 @@ export function MobileFab() {
           icon={<MessageSquare size={22} strokeWidth={1.5} />}
           onClick={() => scrollTo("contact")}
         />
-        {mounted && (
-          <MenuItem
-            icon={
-              theme === "dark" ? (
-                <Sun size={22} strokeWidth={1.5} />
-              ) : (
-                <Moon size={22} strokeWidth={1.5} />
-              )
-            }
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          />
-        )}
+
       </MenuContainer>
     </div>
   );

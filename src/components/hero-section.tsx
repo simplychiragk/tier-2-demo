@@ -218,13 +218,13 @@ export function HeroSection() {
           className="absolute inset-0 flex flex-col justify-center items-center z-20 px-4 md:px-8 pointer-events-none"
         >
           <div className="text-center max-w-4xl pt-16">
-            <span className="inline-block text-[10px] uppercase tracking-widest font-medium px-4 py-1.5 rounded-full mb-8 border border-white/10 bg-black/30 backdrop-blur-md text-white/90">
+            <span className="inline-block text-[10px] uppercase tracking-widest font-medium px-4 py-1.5 rounded-full mb-8 border border-amber-500/30 bg-amber-500/5 backdrop-blur-md text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.15)]">
               MedCare Priority
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium tracking-tight text-white mb-6 drop-shadow-lg">
               Your Family's Health
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-teal-50 via-teal-100 to-teal-400">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-amber-200 via-amber-400 to-amber-600">
                 Our Mission
               </span>
             </h1>
@@ -235,13 +235,13 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 pointer-events-auto">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-teal-600/90 hover:bg-teal-500 backdrop-blur-md text-white font-medium tracking-wide rounded-xl transition-all duration-300 shadow-[0_0_40px_rgba(45,212,191,0.2)] hover:shadow-[0_0_50px_rgba(45,212,191,0.3)] hover:-translate-y-0.5 border border-teal-500/50"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-amber-500 hover:bg-amber-400 backdrop-blur-md text-black font-semibold tracking-wide rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(245,158,11,0.3)] hover:shadow-[0_0_40px_rgba(245,158,11,0.5)] hover:-translate-y-0.5 border border-amber-400/50"
               >
                 Book Appointment
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium tracking-wide rounded-xl transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 hover:bg-teal-500/10 border border-white/10 hover:border-teal-500/50 text-white font-medium tracking-wide rounded-full transition-all duration-300 backdrop-blur-md hover:-translate-y-0.5"
               >
                 Discover Our Services
               </a>

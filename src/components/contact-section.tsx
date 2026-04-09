@@ -36,7 +36,8 @@ export function ContactSection() {
     "hover:border-slate-400",
     // Dark Mode styling
     "dark:bg-[#080808] dark:border-white/[0.08] dark:text-white/90 dark:placeholder:text-white/30",
-    "dark:focus:border-teal-500/50 dark:focus:ring-0 dark:focus:shadow-[0_0_20px_rgba(45,212,191,0.15)] dark:focus:bg-[#0a0a0a]",
+    // Focus ring
+    "dark:focus:border-amber-500/50 dark:focus:ring-0 dark:focus:shadow-[0_0_20px_rgba(245,158,11,0.15)] dark:focus:bg-[#0a0a0a]",
     "dark:hover:border-white/[0.15]"
   );
 
@@ -44,7 +45,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="relative py-24 md:py-32 overflow-hidden bg-slate-50 dark:bg-[#030303] transition-colors duration-700">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] bg-transparent dark:bg-[radial-gradient(circle,rgba(45,212,191,0.06)_0%,transparent_60%)] rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] bg-transparent dark:bg-[radial-gradient(circle,rgba(245,158,11,0.06)_0%,transparent_60%)] rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
         <motion.div
@@ -54,7 +55,7 @@ export function ContactSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-16 md:mb-24"
         >
-          <span className="inline-block text-[10px] uppercase tracking-widest font-medium px-4 py-1.5 rounded-full mb-8 border transition-colors duration-700 text-slate-500 border-slate-200 bg-white dark:text-teal-400 dark:border-teal-400/20 dark:bg-teal-400/5">
+          <span className="inline-block text-[10px] uppercase tracking-widest font-medium px-4 py-1.5 rounded-full mb-8 border transition-colors duration-700 text-slate-500 border-slate-200 bg-white dark:text-amber-500 dark:border-amber-500/20 dark:bg-amber-500/5">
             Concierge Support
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif font-medium mb-6 tracking-tight text-slate-900 dark:text-white transition-colors duration-700">
@@ -72,9 +73,9 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className="lg:col-span-7 rounded-3xl p-8 md:p-12 relative overflow-hidden transition-all duration-400 bg-white border border-slate-200 shadow-sm dark:bg-card dark:border-border/50 dark:shadow-[0_40px_80px_rgba(0,0,0,0.8)]"
+            className="lg:col-span-7 rounded-3xl p-8 md:p-12 relative overflow-hidden transition-all duration-400 bg-white border border-slate-200 shadow-sm dark:bg-card dark:border-border/50 dark:shadow-[0_40px_80px_rgba(0,0,0,0.8)] glow-gold-hover hover:border-amber-400/50"
           >
-            <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(ellipse_at_top_right,rgba(45,212,191,0.06),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+            <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(ellipse_at_top_right,rgba(245,158,11,0.06),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
 
             <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-8" noValidate>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -181,14 +182,14 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                className="mt-6 flex items-center justify-center gap-4 w-full sm:w-auto px-12 py-5 rounded-xl font-medium tracking-wide text-sm transition-all duration-300
+                className="mt-6 flex items-center justify-center gap-4 w-full sm:w-auto px-12 py-5 rounded-full font-semibold tracking-wide text-sm transition-all duration-300
                 bg-[#2B7A9E] text-white shadow-md hover:shadow-lg hover:bg-[#205d78]
-                dark:bg-[#0a0a0a]/80 dark:backdrop-blur-md dark:border dark:border-teal-500/30 dark:shadow-[0_10px_30px_rgba(0,0,0,0.5)] dark:hover:bg-[#0f0f0f] dark:hover:border-teal-400/50 dark:hover:shadow-[0_15px_40px_rgba(45,212,191,0.2)]"
+                dark:bg-amber-500 dark:text-black dark:border dark:border-amber-400/50 dark:shadow-[0_5px_20px_rgba(245,158,11,0.3)] dark:hover:bg-amber-400 dark:hover:shadow-[0_10px_30px_rgba(245,158,11,0.5)]"
               >
                 <span className="relative z-10 block pt-[1px]">
                   Submit Inquiry
                 </span>
-                <Send size={16} className="text-white/90 dark:text-teal-400 transition-transform duration-300 relative z-10" />
+                <Send size={16} className="text-black/90 transition-transform duration-300 relative z-10" />
               </button>
             </form>
           </motion.div>
@@ -199,9 +200,9 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="group relative lg:col-span-5 rounded-3xl p-8 md:p-12 flex flex-col justify-between transition-all duration-400 bg-white border border-slate-200 shadow-sm dark:bg-card dark:border-border/50 dark:shadow-[0_40px_80px_rgba(0,0,0,0.8)]"
+            className="group relative lg:col-span-5 rounded-3xl p-8 md:p-12 flex flex-col justify-between transition-all duration-400 bg-white border border-slate-200 shadow-sm dark:bg-card dark:border-border/50 dark:shadow-[0_40px_80px_rgba(0,0,0,0.8)] glow-gold-hover hover:border-amber-400/50"
           >
-             <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(ellipse_at_bottom_left,rgba(45,212,191,0.04),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+             <div className="absolute inset-0 bg-transparent dark:bg-[radial-gradient(ellipse_at_bottom_left,rgba(245,158,11,0.06),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
 
             <div className="flex flex-col gap-14 h-full relative z-10">
               {/* Box 1 */}
@@ -214,8 +215,8 @@ export function ContactSection() {
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,#F1F5F9_100%)] dark:bg-[radial-gradient(circle_at_center,transparent_0%,#030303_100%)] transition-colors duration-700" />
                   <div className="absolute inset-0 grid place-items-center">
                     <div className="relative">
-                       <MapPin className="text-slate-600 dark:text-teal-400/80 h-10 w-10 relative z-10 dark:drop-shadow-[0_0_15px_rgba(45,212,191,0.5)]" strokeWidth={1} />
-                       {/* Pulse ring dark mode only */}
+                       <MapPin className="text-slate-600 dark:text-amber-500 h-10 w-10 relative z-10 dark:drop-shadow-[0_0_15px_rgba(245,158,11,0.5)]" strokeWidth={1} />
+                       {/* Teal secondary pulse ring */}
                        <div className="hidden dark:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full dark:border dark:border-teal-500/40 animate-ping" />
                     </div>
                   </div>

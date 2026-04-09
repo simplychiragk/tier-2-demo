@@ -40,7 +40,7 @@ export function TestimonialsSection() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="mb-12 md:mb-16 max-w-3xl"
         >
-          <span className="inline-block text-[10px] tracking-widest font-medium text-primary uppercase mb-4">
+          <span className="inline-block text-[10px] tracking-widest font-medium text-teal-500 uppercase mb-4">
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4 tracking-tight leading-tight">
@@ -62,9 +62,9 @@ export function TestimonialsSection() {
                 ease: "easeOut"
               }}
               className={cn(
-                "relative flex flex-col gap-6 p-8 rounded-2xl",
+                "relative flex flex-col gap-6 p-8 rounded-3xl",
                 "bg-card border border-slate-100 dark:border-white/[0.05] shadow-sm dark:shadow-none",
-                "hover:-translate-y-1 transition-all duration-400 cursor-default",
+                "hover:-translate-y-1 transition-all duration-400 cursor-default glow-gold-hover",
                 // Subtle offset for middle card (Tier 2 polish)
                 i === 1 ? "md:-translate-y-3" : ""
               )}
@@ -72,7 +72,7 @@ export function TestimonialsSection() {
               {/* Quote icon */}
               <Quote
                 size={28}
-                className="text-primary/20 transition-colors duration-400"
+                className="text-amber-500/20 transition-colors duration-400"
               />
 
               {/* Stars */}
@@ -81,7 +81,7 @@ export function TestimonialsSection() {
                   <Star
                     key={si}
                     size={16}
-                    className="fill-amber-400/70 text-amber-400/70"
+                    className="fill-amber-500 text-amber-500"
                   />
                 ))}
               </div>
